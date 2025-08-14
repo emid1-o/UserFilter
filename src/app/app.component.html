@@ -7,11 +7,12 @@
         </div>
         <div class="main-left-div">
             <!--conteudo da div da esquerda 80% de altura-->
+            <app-users-list></app-users-list>
 
         </div>
     </div>
     <div class="right-div">
         <!--conteudo da div direita-->
-        <app-user-details></app-user-details>
+        <app-user-details [user]="userSelected"></app-user-details>
     </div>
 </div>
