@@ -6,13 +6,13 @@
         <!-- coluna de nome -->
         <ng-container matColumnDef="name">
             <th mat-header-cell *matHeaderCellDef> Nome </th>
-            <td mat-cell *matCellDef="let element" class="users-list__item" (click)="onUserSelected(element)"> {{element.nome}} </td>
+            <td mat-cell *matCellDef="let element" class="users-list__item" (click)="onUserSelected(element)"> {{element.nome | dashIfEmpty}} </td>
         </ng-container>
 
         <!-- coluna data de cadastro -->
         <ng-container matColumnDef="date">
             <th mat-header-cell *matHeaderCellDef> Data de Cadastro </th>
-            <td mat-cell *matCellDef="let element" class="users-list__item" (click)="onUserSelected(element)"> {{element.dataCadastro}} </td>
+            <td mat-cell *matCellDef="let element" class="users-list__item" (click)="onUserSelected(element)"> {{element.dataCadastro | date: 'dd/MM/yyyy' | dashIfEmpty}} </td>
         </ng-container>
 
         <!-- Coluna de status -->
